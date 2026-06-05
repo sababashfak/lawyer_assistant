@@ -1,0 +1,139 @@
+lawyer_assistant/
+│
+├── app.py
+├── requirements.txt
+├── .env
+├── README.md
+│
+├── backend/
+│   │
+│   ├── api/
+│   │   ├── upload.py
+│   │   ├── chat.py
+│   │   ├── search.py
+│   │   └── admin.py
+│   │
+│   ├── database/
+│   │   ├── models.py
+│   │   ├── sqlite_db.py
+│   │   └── postgres_db.py
+│   │
+│   ├── services/
+│   │   ├── document_service.py
+│   │   ├── retrieval_service.py
+│   │   ├── citation_service.py
+│   │   └── evaluation_service.py
+│   │
+│   └── config.py
+│
+├── frontend/
+│   │
+│   ├── public/
+│   │
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── UploadPage.jsx
+│   │   │   ├── ChatPage.jsx
+│   │   │   ├── SourcesPage.jsx
+│   │   │   └── DashboardPage.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── ChatBox.jsx
+│   │   │   ├── CitationCard.jsx
+│   │   │   ├── UploadForm.jsx
+│   │   │   └── Sidebar.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   │
+│   │   └── App.jsx
+│
+├── ingestion/
+│   │
+│   ├── pdf_parser.py
+│   ├── docx_parser.py
+│   ├── txt_parser.py
+│   │
+│   ├── metadata_extractor.py
+│   ├── chunker.py
+│   ├── embedder.py
+│   └── ingestion_pipeline.py
+│
+├── retrieval/
+│   │
+│   ├── qdrant_client.py
+│   ├── bm25_search.py
+│   ├── vector_search.py
+│   ├── hybrid_search.py
+│   ├── reranker.py
+│   └── confidence_scorer.py
+│
+├── agents/
+│   │
+│   ├── orchestrator.py
+│   │
+│   ├── retriever.py
+│   ├── researcher.py
+│   ├── verifier.py
+│   ├── answer_writer.py
+│   │
+│   └── web_researcher.py
+│
+├── llm/
+│   │
+│   ├── prompts/
+│   │   ├── researcher_prompt.txt
+│   │   ├── verifier_prompt.txt
+│   │   ├── answer_prompt.txt
+│   │   └── web_search_prompt.txt
+│   │
+│   ├── openrouter_client.py
+│   ├── groq_client.py
+│   └── llm_factory.py
+│
+├── citations/
+│   │
+│   ├── citation_formatter.py
+│   ├── source_tracker.py
+│   └── page_reference.py
+│
+├── uploads/
+│   │
+│   ├── books/
+│   ├── constitutions/
+│   ├── case_laws/
+│   ├── regulations/
+│   └── temporary/
+│
+├── vector_store/
+│   │
+│   ├── qdrant_data/
+│   └── snapshots/
+│
+├── evaluation/
+│   │
+│   ├── benchmark_questions.json
+│   ├── retrieval_test.py
+│   ├── citation_test.py
+│   └── hallucination_test.py
+│
+├── logs/
+│   │
+│   ├── app.log
+│   ├── ingestion.log
+│   └── agent.log
+│
+├── tests/
+│   │
+│   ├── test_ingestion.py
+│   ├── test_retrieval.py
+│   ├── test_agents.py
+│   ├── test_citations.py
+│   └── test_api.py
+│
+└── docs/
+    │
+    ├── architecture.md
+    ├── api_documentation.md
+    ├── database_design.md
+    └── deployment_guide.md
